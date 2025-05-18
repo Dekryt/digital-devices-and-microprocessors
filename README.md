@@ -1,2 +1,2 @@
-# digital-devices-and-microprocessors
-labs and practics 
+# Практики и лабораторные по ЦУиМ
+Симахин С.А., ИНБс-3301, вариант №15
