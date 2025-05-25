@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MCUProject Schema="60" Class="CMCUProject" Path="" PathAbs="" ProjectType="0">
+<ProjectFolders/>
+<ProjectFiles>
+<FileItem>
+<MCUFile Class="CMCUFile" Path="&amp;ASCmain.c" PathAbs="&amp;UNIC:\Users\dekry\OneDrive\_uc7042004300431043e044704380439 _uc404410442043e043b\_uc8041f04400430043a04420438043a0430 1\First_pr\First_pr\main.c" UseFileOptions="0" FileOptions=""/>
+</FileItem>
+</ProjectFiles>
+<BuildSettings>
+<MCUProjectBuildSettings Class="CMCUProjectBuildSettings" ToolGroupType="3" IntermediatePath="&amp;UNI..\..\..\..\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\First_pr\First_pr\" IntermediatePathAbs="&amp;UNIC:\Users\dekry\OneDrive\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\First_pr\First_pr\" OutputPath="&amp;UNI..\..\..\..\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\First_pr\First_pr\" OutputPathAbs="&amp;UNIC:\Users\dekry\OneDrive\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\First_pr\First_pr\" TargetFileType="6" SimPath="&amp;UNI..\..\..\..\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\First_pr\First_pr\" SimPathAbs="&amp;UNIC:\Users\dekry\OneDrive\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\First_pr\First_pr\" SimFile="&amp;ASCFirst_pr.hex" CodeLoadType="0">
+<Assembler>
+<MCUToolSettings Class="CMCUToolSettings" ToolType="0" IntermediatePath="&amp;ASC.\" IntermediatePathAbs="&amp;UNIC:\Users\dekry\OneDrive\_uc7042004300431043e044704380439 _uc404410442043e043b\_uc8041f04400430043a04420438043a0430 1\First_pr\First_pr\" OutputPath="&amp;ASC.\" OutputPathAbs="&amp;UNIC:\Users\dekry\OneDrive\_uc7042004300431043e044704380439 _uc404410442043e043b\_uc8041f04400430043a04420438043a0430 1\First_pr\First_pr\" TargetType="6" IncludeOptions="&amp;ASC$MOD51" PreFilenameOptions="" PostFilenameOptions="">
+<MCULibraries/>
+</MCUToolSettings>
+</Assembler>
+<Compiler>
+<MCUToolSettings Class="CMCUToolSettings" ToolType="-1" IntermediatePath="&amp;UNI..\..\..\..\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\First_pr\First_pr\" IntermediatePathAbs="&amp;UNIC:\Users\dekry\OneDrive\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\First_pr\First_pr\" OutputPath="&amp;UNI..\..\..\..\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\First_pr\First_pr\" OutputPathAbs="&amp;UNIC:\Users\dekry\OneDrive\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\First_pr\First_pr\" TargetType="-1" IncludeOptions="" PreFilenameOptions="&amp;ASC--ASMLIST -G -M -N255 -P --OPT=none --CHIP=8051AH  --ERRFORMAT=&quot;error; file %f; line %l; column %c; %s&quot;  --WARNFORMAT=&quot;warning; file %f; line %l; column %c; %s&quot;  --MSGFORMAT=&quot;message; file %f; line %l; column %c; %s&quot; " PostFilenameOptions="">
+<MCULibraries/>
+</MCUToolSettings>
+</Compiler>
+<Library>
+<MCUToolSettings Class="CMCUToolSettings" ToolType="6" IntermediatePath="&amp;UNI..\..\..\..\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\First_pr\First_pr\" IntermediatePathAbs="&amp;UNIC:\Users\dekry\OneDrive\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\First_pr\First_pr\" OutputPath="&amp;UNI..\..\..\..\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\First_pr\First_pr\" OutputPathAbs="&amp;UNIC:\Users\dekry\OneDrive\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\First_pr\First_pr\" TargetType="7" IncludeOptions="" PreFilenameOptions="&amp;ASC r &quot;First_pr.lib&quot;" PostFilenameOptions="">
+<MCULibraries/>
+</MCUToolSettings>
+</Library>
+</MCUProjectBuildSettings>
+</BuildSettings>
+</MCUProject>
