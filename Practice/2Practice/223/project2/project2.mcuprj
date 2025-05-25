@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="ASCII"?>
+<MCUProject Schema="60" Class="CMCUProject" Path="" PathAbs="" ProjectType="0">
+<ProjectFolders/>
+<ProjectFiles>
+<FileItem>
+<MCUFile Class="CMCUFile" Path="&amp;ASCmain.c" PathAbs="&amp;UNIF:\3 _uc4043a044304400441 6 _uc704410435043c0435044104420440\_uc80426043804440440043e0432044b0435 _uca0443044104420440043e04390441044204320430 _uc10438 _ucf043c0438043a0440043e043f0440043e0446043504410441043e0440044b\_uc8041f04400430043a04420438043a0430 2\223\project2\main.c" UseFileOptions="0" FileOptions=""/>
+</FileItem>
+</ProjectFiles>
+<BuildSettings>
+<MCUProjectBuildSettings Class="CMCUProjectBuildSettings" ToolGroupType="3" IntermediatePath="&amp;UNIC:\Users\dekry\OneDrive\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\222\project2\" IntermediatePathAbs="&amp;UNIC:\Users\dekry\OneDrive\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\222\project2\" OutputPath="&amp;UNIC:\Users\dekry\OneDrive\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\222\project2\" OutputPathAbs="&amp;UNIC:\Users\dekry\OneDrive\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\222\project2\" TargetFileType="6" SimPath="&amp;UNIC:\Users\dekry\OneDrive\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\222\project2\" SimPathAbs="&amp;UNIC:\Users\dekry\OneDrive\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\222\project2\" SimFile="&amp;ASCproject2.hex" CodeLoadType="0">
+<Assembler>
+<MCUToolSettings Class="CMCUToolSettings" ToolType="0" IntermediatePath="&amp;ASC.\" IntermediatePathAbs="" OutputPath="&amp;ASC.\" OutputPathAbs="" TargetType="6" IncludeOptions="&amp;ASC$MOD51" PreFilenameOptions="" PostFilenameOptions="">
+<MCULibraries/>
+</MCUToolSettings>
+</Assembler>
+<Compiler>
+<MCUToolSettings Class="CMCUToolSettings" ToolType="-1" IntermediatePath="&amp;UNIC:\Users\dekry\OneDrive\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\222\project2\" IntermediatePathAbs="&amp;UNIC:\Users\dekry\OneDrive\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\222\project2\" OutputPath="&amp;UNIC:\Users\dekry\OneDrive\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\222\project2\" OutputPathAbs="&amp;UNIC:\Users\dekry\OneDrive\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\222\project2\" TargetType="-1" IncludeOptions="" PreFilenameOptions="&amp;ASC--ASMLIST -G -M -N255 -P --OPT=none --CHIP=8051AH  --ERRFORMAT=&quot;error; file %f; line %l; column %c; %s&quot;  --WARNFORMAT=&quot;warning; file %f; line %l; column %c; %s&quot;  --MSGFORMAT=&quot;message; file %f; line %l; column %c; %s&quot; " PostFilenameOptions="">
+<MCULibraries/>
+</MCUToolSettings>
+</Compiler>
+<Library>
+<MCUToolSettings Class="CMCUToolSettings" ToolType="6" IntermediatePath="&amp;UNIC:\Users\dekry\OneDrive\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\222\project2\" IntermediatePathAbs="&amp;UNIC:\Users\dekry\OneDrive\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\222\project2\" OutputPath="&amp;UNIC:\Users\dekry\OneDrive\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\222\project2\" OutputPathAbs="&amp;UNIC:\Users\dekry\OneDrive\_uc90414043e043a0443043c0435043d0442044b\National Instruments\Circuit Design Suite 11.0\MCU Workspaces\222\project2\" TargetType="7" IncludeOptions="" PreFilenameOptions="&amp;ASC r &quot;project2.lib&quot;" PostFilenameOptions="">
+<MCULibraries/>
+</MCUToolSettings>
+</Library>
+</MCUProjectBuildSettings>
+</BuildSettings>
+</MCUProject>
