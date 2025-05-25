@@ -1,0 +1,121 @@
+HI-TECH Software 8051-C Compiler V9.60
+
+Linker command line:
+
+--edf=C:\PROGRA~2\HI-TEC~1\HC51\lite\9.60\dat\en_msgs.txt -h+Z:\333.sym -z \
+  -Q8051AH -ol.obj -MZ:\333.map -E1 -ver=8051-C#V9.60 -ACODE=00h-0FFFh \
+  -pvectors=00h -prbit=0/20h,rbss,rdata/CODE,irdata/CODE,idata/rbss \
+  -pbss=XDATA/idata -pdata=CODE+100h -pconst=CODE+100h -pstrings=CODE+100h \
+  -pnvram=bss,heap C:\Users\dekry\AppData\Local\Temp\st0c.obj Z:\main_0.obj \
+  C:\PROGRA~2\HI-TEC~1\HC51\lite\9.60\lib\51--nsc.lib 
+
+Object code version is 3.8
+
+Machine type is 8051AH
+
+Call graph:
+
+*start1 size 0,0 offset 0
+*    _main size 0,0 offset 0
+*        _task size 0,6 offset 0
+*            _strlen size 0,0 offset 10
+             _clear size 0,0 offset 6
+             _commandor size 0,0 offset 6
+*            _vivod size 0,4 offset 6
+*                _strlen size 0,0 offset 10
+*                _zapis size 0,0 offset 10
+*            _zapis size 0,0 offset 10
+             _sleep size 0,0 offset 6
+*        _vivod size 0,4 offset 6
+*            _strlen size 0,0 offset 10
+*            _zapis size 0,0 offset 10
+
+		Name          Link     Load   Length Selector Space Scale
+C:\Users\dekry\AppData\Local\Temp\st0c.obj
+		vectors          0        0        3       0     0
+		text            A2       A2       14       0     0
+Z:\main_0.obj   rbss            20       20        4      20     1
+		data           100      100        2     100     0
+		strings        102      102       1E     100     0
+		text           120      120      1C5     100     0
+
+C:\PROGRA~2\HI-TEC~1\HC51\lite\9.60\lib\51--nsc.lib
+ldc_byte.obj    text             3        3       73       0     0
+powerup.obj     text            B6       B6        3       0     0
+strlen.obj      text            76       76       2C       0     0
+
+COMMON          rbss            24       24        A      20     1
+
+TOTAL		Name          Link     Load   Length
+	CLASS	CODE     
+		vectors          0        0        3
+		data           100      100        2
+		text            A2       A2       14
+		strings        102      102       1E
+		text           120      120      1C5
+		text             3        3       73
+		text            B6       B6        3
+		text            76       76       2C
+
+	CLASS	DATA     
+		rbss            20       20        E
+
+	CLASS	XDATA    
+
+	CLASS	BITSEG   
+
+
+
+SEGMENTS	Name		Load	Length	 Top	Selector    Space Class
+
+		vectors         000000	0000B9	0000B9	       0       0  CODE    
+		rbit            000020	00000E	00002E	      20       1  BITSEG  
+		data            000100	0001E5	0002E5	     100       0  CODE    
+
+
+UNUSED ADDRESS RANGES
+
+	CODE             0B9-0FF
+	                 2E5-FFF
+
+                                  Symbol Table
+
+?a_task        rbss    024  ?a_vivod       rbss    02A
+_E             (abs)   0A0  _RS            (abs)   0A1
+_RW            (abs)   0A2  __Bbss         bss     02E
+__Bidata       idata   02E  __Birdata      irdata  003
+__Brbit        rbit    020  __Brdata       rdata   003
+__Hbss         bss     02E  __Hcode        code    02E
+__Hconst       const   100  __Hdata        data    102
+__Hheap        heap    02E  __Hidata       idata   02E
+__Hirdata      irdata  02E  __Hnvram       nvram   02E
+__Hrbit        rbit    000  __Hrbss        rbss    02E
+__Hrdata       rdata   02E  __Hstrings     strings 120
+__Htext        text    02E  __Hvectors     vectors 003
+__Lbss         bss     02E  __Lcode        code    02E
+__Lconst       const   100  __Ldata        data    100
+__Lheap        heap    02E  __Lidata       idata   02E
+__Lirdata      irdata  02E  __Lnvram       nvram   02E
+__Lrbit        rbit    000  __Lrbss        rbss    020
+__Lrdata       rdata   02E  __Lstrings     strings 102
+__Ltext        text    02E  __Lvectors     vectors 000
+__S0           (abs)   2E5  _clear         text    18A
+_commandor     text    17B  _counter       rbss    020
+_data          (abs)   080  _exit          text    0B3
+_i             rbss    022  _left          data    101
+_main          text    2CE  _right         data    100
+_sleep         text    19A  _strlen        text    076
+_task          text    1BE  _vivod         text    12F
+_zapis         text    120  intlevel0      (abs)   000
+intlevel1      (abs)   000  ldb_r0         text    012
+ldb_r1         text    01F  ldb_r2         text    02C
+ldb_r3         text    039  ldb_r4         text    046
+ldb_r5         text    053  ldb_r6         text    060
+ldb_r7         text    06D  ldc_byte       text    003
+ldc_r0         text    00E  ldc_r1         text    01B
+ldc_r2         text    028  ldc_r3         text    035
+ldc_r4         text    042  ldc_r5         text    04F
+ldc_r6         text    05C  ldc_r7         text    069
+powerup        text    0B6  small_model    (abs)   001
+stack_internal (abs)   001  start          vectors 000
+start1         text    0A2  

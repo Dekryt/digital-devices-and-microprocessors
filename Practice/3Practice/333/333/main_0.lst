@@ -1,0 +1,854 @@
+
+
+HI-TECH Software 8051 Macro Assembler V9.60                                Page 1
+                                                       Sat Mar 08 21:52:24 2025
+
+     1                           	psect	idata,class=DATA,space=1,limit=080h
+     2                           	psect	irdata,class=DATA,limit=080h
+     3                           	global	stack_internal
+     4                           	psect	data,class=CODE
+     5                           	psect	data
+     6                           	global	_right
+     7  00100                     _right:
+     8  00100  06                 	db	(6)
+     9                           	global	_left
+    10  00101                     _left:
+    11  00101  04                 	db	(4)
+    12                           	global	_zapis
+    13                           	signat	_zapis,4216
+    14                           	psect	text,class=CODE
+    15                           	psect	text
+    16                           	file	"C:\Users\dekry\OneDrive\7496~1\NATION~1\C
+                                 IRCUI~1.0\MCUWOR~1\333\333\main.c"
+    17                           	line	25
+    18  00120                     _zapis:
+    19  00120  80 0B              	j	f1491
+    20  00122                     f1490:
+    21                           ;main.c: 24: void zapis(unsigned char pelmen)
+    22                           
+    23                           ;main.c: 25: {
+    24                           
+    25                           ;main.c: 26: RS = 1;
+    26                           
+    27                           	global	_RS
+    28                           	line	26
+    29  00122  D2 A1              	setb	p2.1
+    30                           ;main.c: 27: RW = 0;
+    31                           
+    32                           	global	_RW
+    33                           	line	27
+    34  00124  C2 A2              	clr	p2.2
+    35                           ;main.c: 28: data = pelmen;
+    36                           
+    37                           	global	_data
+    38                           	line	28
+    39  00126  8D 80              	mov	080h,r5
+    40                           ;main.c: 29: E = 1;
+    41                           
+    42                           	global	_E
+    43                           	line	29
+    44  00128  D2 A0              	setb	p2.0
+    45                           ;main.c: 30: E = 0;
+    46                           
+    47                           	line	30
+    48  0012A  C2 A0              	clr	p2.0
+    49                           ;main.c: 31: }
+    50                           
+    51                           	line	31
+    52  0012C                     l2:
+    53  0012C  22                 	ret
+    54  0012D                     f1491:
+    55  0012D  80 F3              	j	f1490
+    56  0000                     f1492	equ	0
+    57                           ;	param _pelmen assigned to r4/r5 on entry
+    58                           	global	_vivod
+    59                           	signat	_vivod,4216
+    60                           	line	34
+    61  0012F                     _vivod:
+    62  0012F  80 48              	j	f1501
+    63  00131                     f1500:
+    64                           ;main.c: 33: void vivod(unsigned char pelmen[])
+    65                           
+    66                           ;main.c: 34: {
+    67                           
+    68                           ;	var   _j assigned to ?a_vivod+0
+    69                           ;main.c: 35: int j;
+    70                           
+    71                           ;main.c: 36: j = strlen(pelmen);
+    72                           
+    73                           	global	_strlen
+    74                           	signat	_strlen,4218
+    75                           	FNCALL	_vivod,_strlen
+    76                           ;	var   _pelmen assigned to ?a_vivod+2
+    77                           ;_pelmen stored from WR2
+    78                           	line	35
+    79  00131  8C 2C              	mov	?a_vivod+2,r4
+    80  00133  8D 2D              	mov	?a_vivod+2+1,r5
+    81                           	line	36
+    82  00135  AC 2C              	mov	r4,?a_vivod+2
+    83  00137  AD 2D              	mov	r5,?a_vivod+2+1
+    84  00139  12 0076            	lcall	_strlen
+    85                           
+    86  0013C  8A 2A              	mov	?a_vivod+0,r2
+    87  0013E  8B 2B              	mov	?a_vivod+0+1,r3
+    88                           ;main.c: 37: for (i = 0; i < j; i++)
+    89                           
+    90                           	global	_i
+    91                           	line	37
+    92  00140  E4                 	clr	a
+    93  00141  F5 22              	mov	_i,a
+    94  00143  F5 23              	mov	_i+1,a
+    95  00145  80 1A              	jmp	l7
+    96                           	line	38
+    97  00147                     l4:
+    98                           ;main.c: 38: {
+    99                           
+   100                           ;main.c: 39: zapis (pelmen[i]);
+   101                           
+   102                           	FNCALL	_vivod,_zapis
+   103                           	line	39
+   104  00147  E5 23              	mov	a,_i+1
+   105  00149  25 2D              	add	a,?a_vivod+2+1
+   106  0014B  F5 82              	mov	dpl,a
+   107  0014D  E5 22              	mov	a,_i
+   108  0014F  35 2C              	addc	a,?a_vivod+2
+   109  00151  F5 83              	mov	dph,a
+   110                           	global	ldc_r5
+   111  00153  12 004F            	call	ldc_r5
+   112  00156  12 0120            	lcall	_zapis
+   113                           
+   114                           	line	37
+   115  00159  05 23              	inc	_i+1
+   116  0015B  E5 23              	mov	a,_i+1
+   117  0015D  70 02              	jnz	u10
+   118  0015F  05 22              	inc	_i
+   119  00161                     u10:
+   120  00161                     l7:
+   121  00161  C3                 	clr	c
+   122  00162  E5 23              	mov	a,_i+1
+   123  00164  95 2B              	subb	a,?a_vivod+0+1
+   124  00166  85 2A  F0          	mov	b,?a_vivod+0
+   125  00169  63 F0 80           	xrl	b,#80h
+   126  0016C  E5 22              	mov	a,_i
+   127  0016E  64 80              	xrl	a,#80h
+   128  00170  95 F0              	subb	a,b
+   129  00172  40 02              	bc	u21
+   130  00174  80 02              	jmp	u20
+   131  00176                     u21:
+   132  00176  80 CF              	jmp	l4
+   133  00178                     u20:
+   134  00178                     l5:
+   135                           ;main.c: 40: }
+   136                           
+   137                           ;main.c: 41: }
+   138                           
+   139                           	line	41
+   140  00178                     l3:
+   141  00178  22                 	ret
+   142  00179                     f1501:
+   143  00179  80 B6              	j	f1500
+   144                           	FNSIZE	_vivod,4,0
+   145                           	global	?a_vivod
+   146  0000                     f1502	equ	0
+   147                           ;	param _pelmen assigned to r5 on entry
+   148                           	global	_commandor
+   149                           	signat	_commandor,4216
+   150                           	line	44
+   151  0017B                     _commandor:
+   152  0017B  80 0B              	j	f1521
+   153  0017D                     f1520:
+   154                           ;main.c: 43: void commandor(unsigned char pelmen
+                                 )
+   155                           
+   156                           ;main.c: 44: {
+   157                           
+   158                           ;main.c: 45: RS = 0;
+   159                           
+   160                           	line	45
+   161  0017D  C2 A1              	clr	p2.1
+   162                           ;main.c: 46: RW = 0;
+   163                           
+   164                           	line	46
+   165  0017F  C2 A2              	clr	p2.2
+   166                           ;main.c: 47: data = pelmen;
+   167                           
+   168                           	line	47
+   169  00181  8D 80              	mov	080h,r5
+   170                           ;main.c: 48: E = 1;
+   171                           
+   172                           	line	48
+   173  00183  D2 A0              	setb	p2.0
+   174                           ;main.c: 49: E = 0;
+   175                           
+   176                           	line	49
+   177  00185  C2 A0              	clr	p2.0
+   178                           ;main.c: 50: }
+   179                           
+   180                           	line	50
+   181  00187                     l8:
+   182  00187  22                 	ret
+   183  00188                     f1521:
+   184  00188  80 F3              	j	f1520
+   185  0000                     f1522	equ	0
+   186                           	global	_clear
+   187                           	signat	_clear,88
+   188                           	line	53
+   189  0018A                     _clear:
+   190  0018A  80 0C              	j	f1531
+   191  0018C                     f1530:
+   192                           ;main.c: 52: void clear()
+   193                           
+   194                           ;main.c: 53: {
+   195                           
+   196                           ;main.c: 54: RS = 0;
+   197                           
+   198                           	line	54
+   199  0018C  C2 A1              	clr	p2.1
+   200                           ;main.c: 55: RW = 0;
+   201                           
+   202                           	line	55
+   203  0018E  C2 A2              	clr	p2.2
+   204                           ;main.c: 56: data = 0x01;
+   205                           
+   206                           	line	56
+   207  00190  75 80 01           	mov	080h,#1
+   208                           ;main.c: 57: E = 1;
+   209                           
+   210                           	line	57
+   211  00193  D2 A0              	setb	p2.0
+   212                           ;main.c: 58: E = 0;
+   213                           
+   214                           	line	58
+   215  00195  C2 A0              	clr	p2.0
+   216                           ;main.c: 59: }
+   217                           
+   218                           	line	59
+   219  00197                     l9:
+   220  00197  22                 	ret
+   221  00198                     f1531:
+   222  00198  80 F2              	j	f1530
+   223  0000                     f1532	equ	0
+   224                           	global	_sleep
+   225                           	signat	_sleep,88
+   226                           	line	62
+   227  0019A                     _sleep:
+   228  0019A  80 20              	j	f1541
+   229  0019C                     f1540:
+   230                           ;main.c: 61: void sleep()
+   231                           
+   232                           ;main.c: 62: {
+   233                           
+   234                           ;main.c: 63: for (i = 0; i < 50; i++);
+   235                           
+   236                           	line	63
+   237  0019C  E4                 	clr	a
+   238  0019D  F5 22              	mov	_i,a
+   239  0019F  F5 23              	mov	_i+1,a
+   240  001A1  80 08              	jmp	l14
+   241  001A3                     l11:
+   242  001A3  05 23              	inc	_i+1
+   243  001A5  E5 23              	mov	a,_i+1
+   244  001A7  70 02              	jnz	u30
+   245  001A9  05 22              	inc	_i
+   246  001AB                     u30:
+   247  001AB                     l14:
+   248  001AB  E5 23              	mov	a,_i+1
+   249  001AD  24 CE              	add	a,#low -(50)
+   250  001AF  E5 22              	mov	a,_i
+   251  001B1  64 80              	xrl	a,#80h
+   252  001B3  34 7F              	addc	a,#(high -(50))xor 80h
+   253  001B5  50 02              	bnc	u41
+   254  001B7  80 02              	jmp	u40
+   255  001B9                     u41:
+   256  001B9  80 E8              	jmp	l11
+   257  001BB                     u40:
+   258  001BB                     l12:
+   259                           ;main.c: 64: }
+   260                           
+   261                           	line	64
+   262  001BB                     l10:
+   263  001BB  22                 	ret
+   264  001BC                     f1541:
+   265  001BC  80 DE              	j	f1540
+   266  0000                     f1542	equ	0
+   267                           ;	param _pelmen assigned to r4/r5 on entry
+   268                           ;	param _pelmen2 assigned to r2/r3 on entry
+   269                           	global	_task
+   270                           	signat	_task,8312
+   271                           	line	66
+   272  001BE                     _task:
+   273  001BE  02 02CB            	j	f1551
+   274  001C1                     f1550:
+   275                           ;main.c: 66: void task(unsigned char* pelmen, un
+                                 signed char* pelmen2) {
+   276                           
+   277                           ;	var   _j assigned to ?a_task+0
+   278                           ;main.c: 67: int j = strlen(pelmen2);
+   279                           
+   280                           	FNCALL	_task,_strlen
+   281                           ;	var   _pelmen2 assigned to ?a_task+2
+   282                           ;_pelmen2 stored from WR1
+   283                           	line	67
+   284  001C1  8A 26              	mov	?a_task+2,r2
+   285  001C3  8B 27              	mov	?a_task+2+1,r3
+   286                           ;	var   _pelmen assigned to ?a_task+4
+   287                           ;_pelmen stored from WR2
+   288  001C5  8C 28              	mov	?a_task+4,r4
+   289  001C7  8D 29              	mov	?a_task+4+1,r5
+   290  001C9  AC 26              	mov	r4,?a_task+2
+   291  001CB  AD 27              	mov	r5,?a_task+2+1
+   292  001CD  12 0076            	lcall	_strlen
+   293                           
+   294  001D0  8A 24              	mov	?a_task+0,r2
+   295  001D2  8B 25              	mov	?a_task+0+1,r3
+   296                           ;main.c: 68: clear();
+   297                           
+   298                           	FNCALL	_task,_clear
+   299                           	line	68
+   300  001D4  12 018A            	lcall	_clear
+   301                           ;main.c: 70: while (1) {
+   302                           
+   303                           	line	70
+   304  001D7                     l17:
+   305                           ;main.c: 71: commandor(0x06);
+   306                           
+   307                           	FNCALL	_task,_commandor
+   308                           	line	71
+   309  001D7  7D 06              	mov	r5,#6
+   310  001D9  12 017B            	lcall	_commandor
+   311                           
+   312                           ;main.c: 72: vivod("       ");
+   313                           
+   314                           	FNCALL	_task,_vivod
+   315                           	line	72
+   316  001DC  7C 01              	mov	r4,#high (0+u19)
+   317  001DE  7D 18              	mov	r5,#low (0+u19)
+   318  001E0  12 012F            	lcall	_vivod
+   319                           
+   320                           ;main.c: 76: zapis(159 + 19);
+   321                           
+   322                           	FNCALL	_task,_zapis
+   323                           	line	76
+   324  001E3  7D B2              	mov	r5,#178
+   325  001E5  12 0120            	lcall	_zapis
+   326                           
+   327                           ;main.c: 77: zapis(159 + 20);
+   328                           
+   329                           	line	77
+   330  001E8  7D B3              	mov	r5,#179
+   331  001EA  12 0120            	lcall	_zapis
+   332                           
+   333                           ;main.c: 78: zapis(159 + 7);
+   334                           
+   335                           	line	78
+   336  001ED  7D A6              	mov	r5,#166
+   337  001EF  12 0120            	lcall	_zapis
+   338                           
+   339                           ;main.c: 79: zapis(159 + 17);
+   340                           
+   341                           	line	79
+   342  001F2  7D B0              	mov	r5,#176
+   343  001F4  12 0120            	lcall	_zapis
+   344                           
+   345                           ;main.c: 80: zapis(159 + 1);
+   346                           
+   347                           	line	80
+   348  001F7  7D A0              	mov	r5,#160
+   349  001F9  12 0120            	lcall	_zapis
+   350                           
+   351                           ;main.c: 82: commandor(0x02);
+   352                           
+   353                           	line	82
+   354  001FC  7D 02              	mov	r5,#2
+   355  001FE  12 017B            	lcall	_commandor
+   356                           
+   357                           ;main.c: 83: commandor(0x04);
+   358                           
+   359                           	line	83
+   360  00201  7D 04              	mov	r5,#4
+   361  00203  12 017B            	lcall	_commandor
+   362                           
+   363                           ;main.c: 84: zapis(' ');
+   364                           
+   365                           	line	84
+   366  00206  7D 20              	mov	r5,#32
+   367  00208  12 0120            	lcall	_zapis
+   368                           
+   369                           ;main.c: 85: for (i = 0; i <= counter; i++) {
+   370                           
+   371                           	line	85
+   372  0020B  E4                 	clr	a
+   373  0020C  F5 22              	mov	_i,a
+   374  0020E  F5 23              	mov	_i+1,a
+   375  00210  80 7A              	jmp	l22
+   376  00212                     l19:
+   377                           ;main.c: 86: if (counter >= j) {
+   378                           
+   379                           	global	_counter
+   380                           	line	86
+   381  00212  C3                 	clr	c
+   382  00213  E5 21              	mov	a,_counter+1
+   383  00215  95 25              	subb	a,?a_task+0+1
+   384  00217  85 24  F0          	mov	b,?a_task+0
+   385  0021A  63 F0 80           	xrl	b,#80h
+   386  0021D  E5 20              	mov	a,_counter
+   387  0021F  64 80              	xrl	a,#80h
+   388  00221  95 F0              	subb	a,b
+   389  00223  40 02              	bc	u51
+   390  00225  80 02              	jmp	u50
+   391  00227                     u51:
+   392  00227  80 40              	jmp	l23
+   393  00229                     u50:
+   394                           ;main.c: 87: if (counter - j - i < 0)
+   395                           
+   396                           	line	87
+   397  00229  E5 21              	mov	a,_counter+1
+   398  0022B  C3                 	clr	c
+   399  0022C  95 25              	subb	a,?a_task+0+1
+   400  0022E  FD                 	mov	r5,a
+   401  0022F  E5 20              	mov	a,_counter
+   402  00231  95 24              	subb	a,?a_task+0
+   403  00233  FC                 	mov	r4,a
+   404  00234  ED                 	mov	a,r5
+   405  00235  C3                 	clr	c
+   406  00236  95 23              	subb	a,_i+1
+   407  00238  FD                 	mov	r5,a
+   408  00239  EC                 	mov	a,r4
+   409  0023A  95 22              	subb	a,_i
+   410  0023C  FC                 	mov	r4,a
+   411  0023D  EC                 	mov	a,r4
+   412  0023E  30 E7 02           	bnb	acc.7, u61
+   413  00241  80 02              	jmp	u60
+   414  00243                     u61:
+   415  00243  80 1D              	jmp	l24
+   416  00245                     u60:
+   417                           ;main.c: 88: zapis(pelmen2[counter - i]);
+   418                           
+   419                           	line	88
+   420  00245  E5 21              	mov	a,_counter+1
+   421  00247  C3                 	clr	c
+   422  00248  95 23              	subb	a,_i+1
+   423  0024A  FD                 	mov	r5,a
+   424  0024B  E5 20              	mov	a,_counter
+   425  0024D  95 22              	subb	a,_i
+   426  0024F  FC                 	mov	r4,a
+   427  00250  ED                 	mov	a,r5
+   428  00251  25 27              	add	a,?a_task+2+1
+   429  00253  F5 82              	mov	dpl,a
+   430  00255  EC                 	mov	a,r4
+   431  00256  35 26              	addc	a,?a_task+2
+   432  00258  F5 83              	mov	dph,a
+   433                           	global	ldc_r5
+   434  0025A  12 004F            	call	ldc_r5
+   435  0025D  12 0120            	lcall	_zapis
+   436                           
+   437  00260  80 05              	jmp	l25
+   438                           	line	89
+   439  00262                     l24:
+   440                           ;main.c: 89: else
+   441                           
+   442                           ;main.c: 90: zapis(' ');
+   443                           
+   444                           	line	90
+   445  00262  7D 20              	mov	r5,#32
+   446  00264  12 0120            	lcall	_zapis
+   447                           
+   448  00267                     l25:
+   449                           ;main.c: 91: }
+   450                           
+   451                           	line	91
+   452  00267  80 1B              	jmp	l26
+   453                           	line	92
+   454  00269                     l23:
+   455                           ;main.c: 92: else
+   456                           
+   457                           ;main.c: 93: zapis(pelmen2[counter - i]);
+   458                           
+   459                           	line	93
+   460  00269  E5 21              	mov	a,_counter+1
+   461  0026B  C3                 	clr	c
+   462  0026C  95 23              	subb	a,_i+1
+   463  0026E  FD                 	mov	r5,a
+   464  0026F  E5 20              	mov	a,_counter
+   465  00271  95 22              	subb	a,_i
+   466  00273  FC                 	mov	r4,a
+   467  00274  ED                 	mov	a,r5
+   468  00275  25 27              	add	a,?a_task+2+1
+   469  00277  F5 82              	mov	dpl,a
+   470  00279  EC                 	mov	a,r4
+   471  0027A  35 26              	addc	a,?a_task+2
+   472  0027C  F5 83              	mov	dph,a
+   473                           	global	ldc_r5
+   474  0027E  12 004F            	call	ldc_r5
+   475  00281  12 0120            	lcall	_zapis
+   476                           
+   477  00284                     l26:
+   478                           	line	85
+   479  00284  05 23              	inc	_i+1
+   480  00286  E5 23              	mov	a,_i+1
+   481  00288  70 02              	jnz	u70
+   482  0028A  05 22              	inc	_i
+   483  0028C                     u70:
+   484  0028C                     l22:
+   485  0028C  C3                 	clr	c
+   486  0028D  E5 21              	mov	a,_counter+1
+   487  0028F  95 23              	subb	a,_i+1
+   488  00291  85 22  F0          	mov	b,_i
+   489  00294  63 F0 80           	xrl	b,#80h
+   490  00297  E5 20              	mov	a,_counter
+   491  00299  64 80              	xrl	a,#80h
+   492  0029B  95 F0              	subb	a,b
+   493  0029D  50 02              	bnc	u81
+   494  0029F  80 03              	jmp	u80
+   495  002A1                     u81:
+   496  002A1  02 0212            	jmp	l19
+   497  002A4                     u80:
+   498  002A4                     l20:
+   499                           ;main.c: 94: }
+   500                           
+   501                           ;main.c: 95: sleep();
+   502                           
+   503                           	FNCALL	_task,_sleep
+   504                           	line	95
+   505  002A4  12 019A            	lcall	_sleep
+   506                           ;main.c: 96: counter++;
+   507                           
+   508                           	line	96
+   509  002A7  05 21              	inc	_counter+1
+   510  002A9  E5 21              	mov	a,_counter+1
+   511  002AB  70 02              	jnz	u90
+   512  002AD  05 20              	inc	_counter
+   513  002AF                     u90:
+   514                           ;main.c: 97: if (counter >= 16)
+   515                           
+   516                           	line	97
+   517  002AF  E5 21              	mov	a,_counter+1
+   518  002B1  24 F0              	add	a,#low -(16)
+   519  002B3  E5 20              	mov	a,_counter
+   520  002B5  64 80              	xrl	a,#80h
+   521  002B7  34 7F              	addc	a,#(high -(16))xor 80h
+   522  002B9  50 02              	bnc	u101
+   523  002BB  80 02              	jmp	u100
+   524  002BD                     u101:
+   525  002BD  80 05              	jmp	l27
+   526  002BF                     u100:
+   527                           ;main.c: 98: counter = 0;
+   528                           
+   529                           	line	98
+   530  002BF  E4                 	clr	a
+   531  002C0  F5 20              	mov	_counter,a
+   532  002C2  F5 21              	mov	_counter+1,a
+   533  002C4                     l27:
+   534                           ;main.c: 99: clear();
+   535                           
+   536                           	line	99
+   537  002C4  12 018A            	lcall	_clear
+   538                           	line	100
+   539  002C7                     l16:
+   540                           	line	70
+   541  002C7  02 01D7            	jmp	l17
+   542  002CA                     l18:
+   543                           ;main.c: 100: }
+   544                           
+   545                           ;main.c: 101: }
+   546                           
+   547                           	line	101
+   548  002CA                     l15:
+   549  002CA  22                 	ret
+   550  002CB                     f1551:
+   551  002CB  02 01C1            	j	f1550
+   552                           	FNSIZE	_task,6,0
+   553                           	global	?a_task
+   554  0000                     f1552	equ	0
+   555                           	global	_main
+   556                           	signat	_main,88
+   557                           	line	103
+   558  002CE                     _main:
+   559  002CE  80 13              	j	f1561
+   560  002D0                     f1560:
+   561                           ;main.c: 103: void main() {
+   562                           
+   563                           ;main.c: 104: task(
+   564                           
+   565                           ;main.c: 105: "svo svo svo",
+   566                           
+   567                           ;main.c: 106: "svo svo"
+   568                           
+   569                           ;main.c: 107: );
+   570                           
+   571                           	FNCALL	_main,_task
+   572                           	line	107
+   573  002D0  7A 01              	mov	r2,#high (0+u39)
+   574  002D2  7B 06              	mov	r3,#low (0+u39)
+   575  002D4  7C 01              	mov	r4,#high (0+u29)
+   576  002D6  7D 02              	mov	r5,#low (0+u29)
+   577  002D8  12 01BE            	lcall	_task
+   578                           
+   579                           ;main.c: 108: vivod("wake up! ");
+   580                           
+   581                           	FNCALL	_main,_vivod
+   582                           	line	108
+   583  002DB  7C 01              	mov	r4,#high (0+u49)
+   584  002DD  7D 0E              	mov	r5,#low (0+u49)
+   585  002DF  12 012F            	lcall	_vivod
+   586                           
+   587                           ;main.c: 109: }
+   588                           
+   589                           	line	109
+   590  002E2                     l28:
+   591  002E2  22                 	ret
+   592  002E3                     f1561:
+   593  002E3  80 EB              	j	f1560
+   594  0000                     f1562	equ	0
+   595                           	psect	strings,class=CODE
+   596                           	psect	strings
+   597  00102                     u29:
+   598  00102  73 76 6F 20        	db	"svo "
+   599  00106                     u39:
+   600  00106  73 76 6F 20 73 76  	db	"svo svo",0
+              6F 00              
+   601  0010E                     u49:
+   602  0010E  77 61 6B 65 20 75  	db	"wake up! ",0
+              70 21 20 00        
+   603  00118                     u19:
+   604  00118  20 20 20 20 20 20  	db	"       ",0
+              20 00              
+   605  0000                     _A10	equ	162
+   606  0000                     _A11	equ	163
+   607  0000                     _A12	equ	164
+   608  0000                     _A13	equ	165
+   609  0000                     _A14	equ	166
+   610  0000                     _A15	equ	167
+   611  0000                     _A8	equ	160
+   612  0000                     _A9	equ	161
+   613  0000                     _AC	equ	214
+   614  0000                     _ACC0	equ	224
+   615  0000                     _ACC1	equ	225
+   616  0000                     _ACC2	equ	226
+   617  0000                     _ACC3	equ	227
+   618  0000                     _ACC4	equ	228
+   619  0000                     _ACC5	equ	229
+   620  0000                     _ACC6	equ	230
+   621  0000                     _ACC7	equ	231
+   622  0000                     _AD0	equ	128
+   623  0000                     _AD1	equ	129
+   624  0000                     _AD2	equ	130
+   625  0000                     _AD3	equ	131
+   626  0000                     _AD4	equ	132
+   627  0000                     _AD5	equ	133
+   628  0000                     _AD6	equ	134
+   629  0000                     _AD7	equ	135
+   630  0000                     _B0	equ	240
+   631  0000                     _B1	equ	241
+   632  0000                     _B2	equ	242
+   633  0000                     _B3	equ	243
+   634  0000                     _B4	equ	244
+   635  0000                     _B5	equ	245
+   636  0000                     _B6	equ	246
+   637  0000                     _B7	equ	247
+   638  0000                     _CY	equ	215
+   639                           	psect	rbit,bit,class=BITSEG,space=1
+   640                           	psect	rbit
+   641                           	global	_E
+   642  0000                     _E	equ	160
+   643  0000                     _EA	equ	175
+   644  0000                     _ES	equ	172
+   645  0000                     _ET0	equ	169
+   646  0000                     _ET1	equ	171
+   647  0000                     _EX0	equ	168
+   648  0000                     _EX1	equ	170
+   649  0000                     _F0	equ	213
+   650  0000                     _IE0	equ	137
+   651  0000                     _IE1	equ	139
+   652  0000                     _INT0	equ	178
+   653  0000                     _INT1	equ	179
+   654  0000                     _IT0	equ	136
+   655  0000                     _IT1	equ	138
+   656  0000                     _OV	equ	210
+   657  0000                     _P	equ	208
+   658  0000                     _P00	equ	128
+   659  0000                     _P01	equ	129
+   660  0000                     _P02	equ	130
+   661  0000                     _P03	equ	131
+   662  0000                     _P04	equ	132
+   663  0000                     _P05	equ	133
+   664  0000                     _P06	equ	134
+   665  0000                     _P07	equ	135
+   666  0000                     _P10	equ	144
+   667  0000                     _P11	equ	145
+   668  0000                     _P12	equ	146
+   669  0000                     _P13	equ	147
+   670  0000                     _P14	equ	148
+   671  0000                     _P15	equ	149
+   672  0000                     _P16	equ	150
+   673  0000                     _P17	equ	151
+   674  0000                     _P20	equ	160
+   675  0000                     _P21	equ	161
+   676  0000                     _P22	equ	162
+   677  0000                     _P23	equ	163
+   678  0000                     _P24	equ	164
+   679  0000                     _P25	equ	165
+   680  0000                     _P26	equ	166
+   681  0000                     _P27	equ	167
+   682  0000                     _P30	equ	176
+   683  0000                     _P31	equ	177
+   684  0000                     _P32	equ	178
+   685  0000                     _P33	equ	179
+   686  0000                     _P34	equ	180
+   687  0000                     _P35	equ	181
+   688  0000                     _P36	equ	182
+   689  0000                     _P37	equ	183
+   690  0000                     _PS	equ	188
+   691  0000                     _PT0	equ	185
+   692  0000                     _PT1	equ	187
+   693  0000                     _PX0	equ	184
+   694  0000                     _PX1	equ	186
+   695  0000                     _RB8	equ	154
+   696  0000                     _RD	equ	183
+   697  0000                     _REN	equ	156
+   698  0000                     _RI	equ	152
+   699                           	global	_RS
+   700  0000                     _RS	equ	161
+   701  0000                     _RS0	equ	211
+   702  0000                     _RS1	equ	212
+   703                           	global	_RW
+   704  0000                     _RW	equ	162
+   705  0000                     _RXD	equ	176
+   706  0000                     _SM0	equ	159
+   707  0000                     _SM1	equ	158
+   708  0000                     _SM2	equ	157
+   709  0000                     _T0	equ	180
+   710  0000                     _T1	equ	181
+   711  0000                     _TB8	equ	155
+   712  0000                     _TF0	equ	141
+   713  0000                     _TF1	equ	143
+   714  0000                     _TI	equ	153
+   715  0000                     _TR0	equ	140
+   716  0000                     _TR1	equ	142
+   717  0000                     _TXD	equ	177
+   718  0000                     _WR	equ	182
+   719  0000                     _ACC	equ	224
+   720  0000                     _B	equ	240
+   721  0000                     _DPH	equ	131
+   722  0000                     _DPL	equ	130
+   723  0000                     _IE	equ	168
+   724  0000                     _IP	equ	184
+   725  0000                     _P0	equ	128
+   726  0000                     _P1	equ	144
+   727  0000                     _P2	equ	160
+   728  0000                     _P3	equ	176
+   729  0000                     _PCON	equ	135
+   730  0000                     _PSW	equ	208
+   731  0000                     _SBUF	equ	153
+   732  0000                     _SCON	equ	152
+   733  0000                     _SP	equ	129
+   734  0000                     _TCON	equ	136
+   735  0000                     _TH0	equ	140
+   736  0000                     _TH1	equ	141
+   737  0000                     _TL0	equ	138
+   738  0000                     _TL1	equ	139
+   739  0000                     _TMOD	equ	137
+   740                           	psect	rbss,class=DATA,space=1
+   741                           	psect	rbss
+   742                           	global	_data
+   743  0000                     _data	equ	128
+   744  0000                     _ACC_BITS	equ	224
+   745  0000                     _B_BITS	equ	240
+   746  0000                     _IE_BITS	equ	168
+   747  0000                     _IP_BITS	equ	184
+   748  0000                     _P0_BITS	equ	128
+   749  0000                     _P1_BITS	equ	144
+   750  0000                     _P2_BITS	equ	160
+   751  0000                     _P3_BITS	equ	176
+   752  0000                     _PCON_BITS	equ	135
+   753  0000                     _PSW_BITS	equ	208
+   754  0000                     _SCON_BITS	equ	152
+   755  0000                     _TCON_BITS	equ	136
+   756  0000                     _TMOD_BITS	equ	137
+   757                           	global	_counter
+   758  00020                     _counter:
+   759  00020                     	ds	2
+   760                           	global	_i
+   761  00022                     _i:
+   762  00022                     	ds	2
+
+
+HI-TECH Software 8051 Macro Assembler V9.60                                Page 2
+Symbol Table                                           Sat Mar 08 21:52:24 2025
+
+            _B 000F0              _E 000A0              l2 0012C  
+            l3 00178              l4 00147              l5 00178  
+            _P 000D0              l7 00161              l8 00187  
+            l9 00197              _i 00022         ?a_task 00024  
+           _B0 000F0             _B1 000F1             _B2 000F2  
+           _B3 000F3             _B4 000F4             _B5 000F5  
+           _B6 000F6             _A8 000A0             _B7 000F7  
+           _A9 000A1             _F0 000D5             _AC 000D6  
+           l10 001BB             l11 001A3             l20 002A4  
+           l12 001BB             l22 0028C             l14 001AB  
+           _EA 000AF             l15 002CA             l23 00269  
+           l16 002C7             l24 00262             l25 00267  
+           l17 001D7             l18 002CA             l26 00284  
+           l27 002C4             l19 00212             _P0 00080  
+           l28 002E2             _P1 00090             _P2 000A0  
+           _P3 000B0             _IE 000A8             _T0 000B4  
+           _T1 000B5             _ES 000AC             _CY 000D7  
+           _IP 000B8             _RD 000B7             u10 00161  
+           u20 00178             _RI 00098             u21 00176  
+           u30 001AB             u40 001BB             _TI 00099  
+           u41 001B9             u50 00229             _PS 000BC  
+           u51 00227             u19 00118             _OV 000D2  
+           u60 00245             u29 00102             u61 00243  
+           _SP 00081             u70 0028C             u39 00106  
+           _RS 000A1             u80 002A4             u49 0010E  
+           u81 002A1             u90 002AF             _RW 000A2  
+           _WR 000B6         _B_BITS 000F0        ?a_vivod 0002A  
+          _A10 000A2            _A11 000A3            _A12 000A4  
+          _A13 000A5            _A14 000A6            _A15 000A7  
+          _AD0 00080            _AD1 00081            _AD2 00082  
+          _AD3 00083            _AD4 00084            _AD5 00085  
+          _AD6 00086            _AD7 00087            _ACC 000E0  
+          _P00 00080            _P01 00081            _P10 00090  
+          _P02 00082            _P11 00091            _P03 00083  
+          _P20 000A0            _P12 00092            _P04 00084  
+          _P21 000A1            _P13 00093            _P05 00085  
+          _P30 000B0            _P22 000A2            _P14 00094  
+          _P06 00086            _P31 000B1            _P23 000A3  
+          _P15 00095            _P07 00087            _P32 000B2  
+          _P24 000A4            _P16 00096            _P33 000B3  
+          _P25 000A5            _P17 00097            _P34 000B4  
+          _P26 000A6            _P35 000B5            _P27 000A7  
+          _P36 000B6            _P37 000B7            _IE0 00089  
+          _IE1 0008B            _ET0 000A9            _ET1 000AB  
+          _EX0 000A8            _EX1 000AA            _DPH 00083  
+          _DPL 00082            _IT0 00088            _IT1 0008A  
+          _RB8 0009A            u100 002BF            u101 002BD  
+          _TF0 0008D            _TB8 0009B            _TF1 0008F  
+          _TH0 0008C            _TH1 0008D            _SM0 0009F  
+          _SM1 0009E            _TL0 0008A            _SM2 0009D  
+          _PT0 000B9            _TL1 0008B            _PT1 000BB  
+          _RS0 000D3            _RS1 000D4            _REN 0009C  
+          _PX0 000B8            _PX1 000BA            _TR0 0008C  
+          _TR1 0008E            _RXD 000B0            _PSW 000D0  
+          _TXD 000B1        _P0_BITS 00080        _P1_BITS 00090  
+      _P2_BITS 000A0        _P3_BITS 000B0        _IE_BITS 000A8  
+     _ACC_BITS 000E0      _commandor 0017B        _IP_BITS 000B8  
+         f1500 00131           f1501 00179           f1502 00000  
+         f1520 0017D           f1521 00188           f1530 0018C  
+         f1522 00000           f1531 00198           f1540 0019C  
+         f1532 00000           f1541 001BC           f1550 001C1  
+         f1542 00000           f1551 002CB           f1560 002D0  
+         f1552 00000           f1561 002E3           f1562 00000  
+         f1490 00122           f1491 0012D           f1492 00000  
+         _ACC0 000E0           _ACC1 000E1           _ACC2 000E2  
+         _ACC3 000E3           _ACC4 000E4           _ACC5 000E5  
+         _ACC6 000E6           _ACC7 000E7  stack_internal 00001  
+         _INT0 000B2           _INT1 000B3           _PCON 00087  
+         _SCON 00098           _SBUF 00099           _TCON 00088  
+         _TMOD 00089           _data 00080           _main 002CE  
+         _left 00101           _task 001BE         _strlen 00076  
+     _PSW_BITS 000D0        _counter 00020          _clear 0018A  
+        _right 00100          _sleep 0019A          ldc_r5 0004F  
+        _zapis 00120          _vivod 0012F      _PCON_BITS 00087  
+    _SCON_BITS 00098      _TCON_BITS 00088      _TMOD_BITS 00089  
+
