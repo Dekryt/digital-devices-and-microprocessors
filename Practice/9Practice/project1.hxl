@@ -1,0 +1,21 @@
+### HEXMate logfile and output summary ###
+### Memory Usage ###
+ Unused memory ranges:
+  4Ah - 7Fh
+  
+ C:\Users\dekry\OneDrive\F0A5~1\9A110~1\project1.hex ranges:
+  0h - 49h
+  
+### Hex Memory Map ###
+ Legend:
+  - = Unused memory
+  F = Filled ROM
+  S = Stored serial code
+  A = Stored ASCII string
+  R = Reserved for checksum
+  C = Stored checksum result
+  T = Trailing code
+  & = Find & replace opcode
+  1 = C:\Users\dekry\OneDrive\F0A5~1\9A110~1\project1.hex
+00000000: 1111111111111111111111111111111111111111111111111111111111111111
+00000040: 1111111111------------------------------------------------------
