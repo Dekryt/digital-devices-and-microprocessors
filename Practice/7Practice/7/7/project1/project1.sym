@@ -1,0 +1,96 @@
+__Lrdata 2C FFFFFFD7 DATA
+__Hrbss 2C 0 DATA
+__Lrbss 20 0 DATA
+__Birdata 3 FFFFFFD7 DATA
+__Hirdata 2C FFFFFFD7 DATA
+_Q 22 0 DATA
+__Lirdata 2C FFFFFFD7 DATA
+_T 100 0 CODE
+_impuls 9C 0 CODE
+_j 28 0 DATA
+powerup F9 0 CODE
+_x 2A 0 DATA
+__Htext 2C 0
+__Ltext 2C 0
+__Hcode 2C 0
+__Lcode 2C 0
+__Hdata 102 0 CODE
+__Hconst 100 0 CODE
+__Ldata 100 0 CODE
+__Lconst 100 0 CODE
+__Bbss 2C 0 XDATA
+__Hbss 2C 0 XDATA
+__Hstrings 100 0 CODE
+__Lbss 2C 0 XDATA
+__Lstrings 100 0 CODE
+__S0 120 0
+start1 E5 0 CODE
+_Kushqa 20 0 DATA
+__Hnvram 2C 0 XDATA
+small_model 1 0
+__Lnvram 2C 0 XDATA
+__Hheap 2C 0 XDATA
+_Qmin 26 0 DATA
+__Lheap 2C 0 XDATA
+_main 69 0 CODE
+_Qmax 24 0 DATA
+awmul 102 0 CODE
+lwmul 102 0 CODE
+_exit F6 0 CODE
+start 0 0 CODE
+intlevel0 0 0
+_prerivanie 3 0 CODE
+__Brbit 20 20 BITSEG
+__Hrbit 0 20 BITSEG
+intlevel1 0 0
+__Hvectors 3 0 CODE
+__Lrbit 0 20 BITSEG
+__Lvectors 0 0 CODE
+__Bidata 2C 0 DATA
+__Hidata 2C 0 DATA
+__Lidata 2C 0 DATA
+stack_internal 1 0
+__Brdata 3 FFFFFFD7 DATA
+__Hrdata 2C FFFFFFD7 DATA
+%segments
+vectors 0 FB CODE
+rbit 0 B BITSEG
+data 100 11F CODE
+%locals
+Z:\main_0.obj
+C:\Users\dekry\OneDrive\F0A5~1\7\7\project1\main.c
+20 3 0 CODE
+21 5 0 CODE
+22 7 0 CODE
+23 20 0 CODE
+24 2C 0 CODE
+25 45 0 CODE
+26 51 0 CODE
+27 58 0 CODE
+28 5E 0 CODE
+31 69 0 CODE
+38 6B 0 CODE
+39 6E 0 CODE
+40 70 0 CODE
+41 72 0 CODE
+44 74 0 CODE
+45 77 0 CODE
+46 7A 0 CODE
+47 7D 0 CODE
+52 83 0 CODE
+53 86 0 CODE
+57 89 0 CODE
+58 8C 0 CODE
+63 8F 0 CODE
+66 92 0 CODE
+65 95 0 CODE
+69 97 0 CODE
+70 99 0 CODE
+73 9C 0 CODE
+77 9E 0 CODE
+78 AD 0 CODE
+79 AF 0 CODE
+80 D5 0 CODE
+81 D7 0 CODE
+82 E0 0 CODE
+83 E2 0 CODE

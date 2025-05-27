@@ -1,0 +1,94 @@
+HI-TECH Software 8051-C Compiler V9.60
+
+Linker command line:
+
+--edf=C:\PROGRA~2\HI-TEC~1\HC51\lite\9.60\dat\en_msgs.txt \
+  -h+Z:\project1.sym -z -Q8052AH -ol.obj -MZ:\project1.map -E1 \
+  -ver=8051-C#V9.60 -ACODE=00h-01FFFh -pvectors=00h \
+  -prbit=0/20h,rbss,rdata/CODE,irdata/CODE,idata/rbss -pbss=XDATA/idata \
+  -pdata=CODE+100h -pconst=CODE+100h -pstrings=CODE+100h -pnvram=bss,heap \
+  C:\Users\dekry\AppData\Local\Temp\s818.obj Z:\main_0.obj \
+  C:\PROGRA~2\HI-TEC~1\HC51\lite\9.60\lib\51--nsc.lib 
+
+Object code version is 3.8
+
+Machine type is 8052AH
+
+Call graph:
+
+*start1 size 0,0 offset 0
+*    _main size 0,0 offset 0
+*        _impuls size 0,0 offset 0
+*_prerivanie size 0,0 offset 0
+
+		Name          Link     Load   Length Selector Space Scale
+C:\Users\dekry\AppData\Local\Temp\s818.obj
+		vectors          0        0        3       0     0
+		text            E5       E5       14       0     0
+Z:\main_0.obj   rbss            20       20        C      20     1
+		data           100      100        2     100     0
+		text             3        3       E2       0     0
+
+C:\PROGRA~2\HI-TEC~1\HC51\lite\9.60\lib\51--nsc.lib
+powerup.obj     text            F9       F9        3       0     0
+mul.obj         text           102      102       1E     100     0
+
+TOTAL		Name          Link     Load   Length
+	CLASS	CODE     
+		vectors          0        0        3
+		data           100      100        2
+		text            E5       E5       14
+		text             3        3       E2
+		text            F9       F9        3
+		text           102      102       1E
+
+	CLASS	DATA     
+		rbss            20       20        C
+
+	CLASS	XDATA    
+
+	CLASS	BITSEG   
+
+
+
+SEGMENTS	Name		Load	Length	 Top	Selector    Space Class
+
+		vectors         000000	0000FC	0000FC	       0       0  CODE    
+		rbit            000020	00000C	00002C	      20       1  BITSEG  
+		data            000100	000020	000120	     100       0  CODE    
+
+
+UNUSED ADDRESS RANGES
+
+	CODE             0FC-0FF
+	                 120-1FFF
+
+                                  Symbol Table
+
+_Kushqa        rbss    020  _Q             rbss    022
+_Qmax          rbss    024  _Qmin          rbss    026
+_T             data    100  __Bbss         bss     02C
+__Bidata       idata   02C  __Birdata      irdata  003
+__Brbit        rbit    020  __Brdata       rdata   003
+__Hbss         bss     02C  __Hcode        code    02C
+__Hconst       const   100  __Hdata        data    102
+__Hheap        heap    02C  __Hidata       idata   02C
+__Hirdata      irdata  02C  __Hnvram       nvram   02C
+__Hrbit        rbit    000  __Hrbss        rbss    02C
+__Hrdata       rdata   02C  __Hstrings     strings 100
+__Htext        text    02C  __Hvectors     vectors 003
+__Lbss         bss     02C  __Lcode        code    02C
+__Lconst       const   100  __Ldata        data    100
+__Lheap        heap    02C  __Lidata       idata   02C
+__Lirdata      irdata  02C  __Lnvram       nvram   02C
+__Lrbit        rbit    000  __Lrbss        rbss    020
+__Lrdata       rdata   02C  __Lstrings     strings 100
+__Ltext        text    02C  __Lvectors     vectors 000
+__S0           (abs)   120  _exit          text    0F6
+_impuls        text    09C  _j             rbss    028
+_main          text    069  _prerivanie    text    003
+_x             rbss    02A  awmul          text    102
+intlevel0      (abs)   000  intlevel1      (abs)   000
+lwmul          text    102  powerup        text    0F9
+small_model    (abs)   001  stack_internal (abs)   001
+start          vectors 000  start1         text    0E5
