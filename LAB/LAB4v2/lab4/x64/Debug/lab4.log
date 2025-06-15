@@ -1,0 +1,52 @@
+﻿  Assembling asm_code.asm...
+  c_func.c
+D:\pyProjects\4lab\c_func.c(6,20): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\pyProjects\4lab\c_func.c(7,11): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\pyProjects\4lab\c_func.c(8,11): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+  lab4.cpp
+C:\Users\nate\AppData\Local\Programs\Python\include\pymath.h(22,15): warning C4273: round: несовместимое связывание dll
+  (компиляция исходного файла "lab4.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(537,44):
+      см. предыдущее определение "round"
+  
+C:\Users\nate\AppData\Local\Programs\Python\include\pymath.h(26,15): warning C4273: acosh: несовместимое связывание dll
+  (компиляция исходного файла "lab4.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(493,47):
+      см. предыдущее определение "acosh"
+  
+C:\Users\nate\AppData\Local\Programs\Python\include\pymath.h(30,15): warning C4273: asinh: несовместимое связывание dll
+  (компиляция исходного файла "lab4.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(494,47):
+      см. предыдущее определение "asinh"
+  
+C:\Users\nate\AppData\Local\Programs\Python\include\pymath.h(34,15): warning C4273: atanh: несовместимое связывание dll
+  (компиляция исходного файла "lab4.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(495,47):
+      см. предыдущее определение "atanh"
+  
+C:\Users\nate\AppData\Local\Programs\Python\include\pymath.h(38,15): warning C4273: log1p: несовместимое связывание dll
+  (компиляция исходного файла "lab4.cpp")
+      C:\Program Files (x86)\Windows Kits\10\Include\10.0.22621.0\ucrt\corecrt_math.h(521,47):
+      см. предыдущее определение "log1p"
+  
+D:\pyProjects\4lab\py_code.py(1,1): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+  (компиляция исходного файла "lab4.cpp")
+  
+D:\pyProjects\4lab\py_code.py(1,8): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "re"
+  (компиляция исходного файла "lab4.cpp")
+  
+D:\pyProjects\4lab\py_code.py(5,5): error C4430: отсутствует спецификатор типа - предполагается int. Примечание. C++ не поддерживает int по умолчанию
+  (компиляция исходного файла "lab4.cpp")
+  
+D:\pyProjects\4lab\py_code.py(5,10): error C2440: инициализация: невозможно преобразовать "const char [27]" в "int"
+  (компиляция исходного файла "lab4.cpp")
+      D:\pyProjects\4lab\py_code.py(5,10):
+      Не существует контекста, в котором такое преобразование возможно
+  
+D:\pyProjects\4lab\lab4.cpp(17,1): error C2059: синтаксическая ошибка: using namespace
+D:\pyProjects\4lab\lab4.cpp(41,5): error C3861: CallPython: идентификатор не найден
+D:\pyProjects\4lab\lab4.cpp(45,6): error C2182: "CallPython": недопустимое использование "void"
+D:\pyProjects\4lab\lab4.cpp(45,17): error C2065: string: необъявленный идентификатор
+D:\pyProjects\4lab\lab4.cpp(45,24): error C2146: синтаксическая ошибка: отсутствие ")" перед идентификатором "PythonModuleName"
+D:\pyProjects\4lab\lab4.cpp(46,1): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+D:\pyProjects\4lab\lab4.cpp(46,1): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)

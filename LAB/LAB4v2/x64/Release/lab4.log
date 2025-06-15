@@ -1,0 +1,16 @@
+﻿  lab4.cpp
+D:\python\include\pymath.h(22,28): warning C4273: round: несовместимое связывание dll
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_math.h(531,44): message : см. предыдущее определение "round"
+D:\python\include\pymath.h(26,28): warning C4273: acosh: несовместимое связывание dll
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_math.h(487,47): message : см. предыдущее определение "acosh"
+D:\python\include\pymath.h(30,28): warning C4273: asinh: несовместимое связывание dll
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_math.h(488,47): message : см. предыдущее определение "asinh"
+D:\python\include\pymath.h(34,28): warning C4273: atanh: несовместимое связывание dll
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_math.h(489,47): message : см. предыдущее определение "atanh"
+D:\python\include\pymath.h(38,28): warning C4273: log1p: несовместимое связывание dll
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\ucrt\corecrt_math.h(515,47): message : см. предыдущее определение "log1p"
+  Создание кода
+  Previous IPDB and IOBJ mismatch, fall back to full compilation.
+  All 84 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  lab4.vcxproj -> D:\papka\4lab\x64\Release\lab4.exe
