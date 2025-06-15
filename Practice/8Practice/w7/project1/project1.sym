@@ -1,0 +1,114 @@
+__Lrdata 34 FFFFFFCF DATA
+__Hrbss 34 0 DATA
+__Lrbss 20 0 DATA
+_interr 3 0 CODE
+__Birdata 3 FFFFFFCF DATA
+__Hirdata 34 FFFFFFCF DATA
+__Lirdata 34 FFFFFFCF DATA
+_i 20 0 DATA
+powerup 15B 0 CODE
+__Htext 34 0
+__Ltext 34 0
+_sleep 9A 0 CODE
+__Hcode 34 0
+__Lcode 34 0
+__Hdata 100 0 CODE
+__Hconst 100 0 CODE
+__Ldata 100 0 CODE
+__Lconst 100 0 CODE
+__Bbss 34 0 XDATA
+__Hbss 34 0 XDATA
+__Hstrings 100 0 CODE
+__Lbss 34 0 XDATA
+__Lstrings 100 0 CODE
+__S0 15E 0
+start1 147 0 CODE
+__Hnvram 34 0 XDATA
+small_model 1 0
+__Lnvram 34 0 XDATA
+_period 22 0 DATA
+__Hheap 34 0 XDATA
+?a_sleep 32 0 DATA
+__Lheap 34 0 XDATA
+_main BE 0 CODE
+_step 24 0 DATA
+_draw 69 0 CODE
+?a_main 26 0 DATA
+_exit 158 0 CODE
+start 0 0 CODE
+intlevel0 0 0
+__Brbit 20 20 BITSEG
+__Hrbit 0 20 BITSEG
+intlevel1 0 0
+__Hvectors 3 0 CODE
+__Lrbit 0 20 BITSEG
+__Lvectors 0 0 CODE
+__Bidata 34 0 DATA
+__Hidata 34 0 DATA
+__Lidata 34 0 DATA
+stack_internal 1 0
+__Brdata 3 FFFFFFCF DATA
+__Hrdata 34 FFFFFFCF DATA
+%segments
+vectors 0 15D CODE
+rbit 0 13 BITSEG
+%locals
+Z:\main_0.obj
+C:\Users\dekry\OneDrive\F0A5~1\8\w7\project1\main.c
+4 3 0 CODE
+5 5 0 CODE
+6 7 0 CODE
+7 20 0 CODE
+8 2C 0 CODE
+9 45 0 CODE
+10 51 0 CODE
+11 58 0 CODE
+12 5E 0 CODE
+20 69 0 CODE
+21 6B 0 CODE
+23 72 0 CODE
+24 78 0 CODE
+21 7F 0 CODE
+26 97 0 CODE
+28 9A 0 CODE
+29 9C 0 CODE
+30 9F 0 CODE
+31 A5 0 CODE
+32 A7 0 CODE
+33 A9 0 CODE
+34 B6 0 CODE
+35 B8 0 CODE
+36 BB 0 CODE
+41 BE 0 CODE
+50 C1 0 CODE
+51 CB 0 CODE
+53 D1 0 CODE
+54 D4 0 CODE
+55 D6 0 CODE
+56 D8 0 CODE
+57 DB 0 CODE
+58 DD 0 CODE
+60 DF 0 CODE
+65 E2 0 CODE
+66 E8 0 CODE
+67 ED 0 CODE
+68 F3 0 CODE
+69 F9 0 CODE
+70 FF 0 CODE
+73 105 0 CODE
+74 108 0 CODE
+75 10E 0 CODE
+76 111 0 CODE
+77 114 0 CODE
+78 11A 0 CODE
+79 11D 0 CODE
+80 120 0 CODE
+81 126 0 CODE
+82 129 0 CODE
+83 12C 0 CODE
+84 132 0 CODE
+85 135 0 CODE
+86 138 0 CODE
+87 13E 0 CODE
+72 141 0 CODE
+91 143 0 CODE
